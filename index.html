@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#171916">
+    <meta name="description" content="Frases inesquecíveis dos filmes que marcaram época.">
+    <title>Fala, Cinema! | Frases de filmes</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Oswald:wght@500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <header class="topbar">
+        <a class="brand" href="#inicio" aria-label="Fala, Cinema! início"><span class="brand-mark">FC</span><span>FALA, <b>CINEMA!</b></span></a>
+        <nav class="top-nav" aria-label="Navegação principal">
+            <a href="#frases">Frases</a>
+            <a href="#bilheteria">Bilheteria</a>
+        </nav>
+        <a class="saved-link" href="#frases" id="favorites-link"><span aria-hidden="true">♡</span> Favoritas <span class="favorite-count" id="favorite-count">0</span></a>
+    </header>
+
+    <main id="inicio">
+        <section class="hero" aria-labelledby="hero-title">
+            <div class="hero-copy">
+                <p class="eyebrow"><span class="eyebrow-line"></span> GRANDES HISTÓRIAS. FRASES ETERNAS.</p>
+                <h1 id="hero-title">O cinema<br>fala <span>com a gente.</span></h1>
+                <p class="hero-description">Relembre aquelas falas que atravessaram a tela e ficaram na memória.</p>
+                <a class="hero-button" href="#frases">EXPLORAR FRASES <span aria-hidden="true">↓</span></a>
+            </div>
+            <div class="hero-art" role="img" aria-label="Sala de cinema pronta para a sessão">
+                <div class="hero-caption"><span>LUZES, CÂMERA, MEMÓRIA</span><span>01 / 10</span></div>
+            </div>
+            <div class="hero-index" aria-hidden="true">CINEMA · DESDE SEMPRE</div>
+        </section>
+
+        <section class="quotes-section" id="frases" aria-labelledby="quotes-title">
+            <div class="section-heading">
+                <div><p class="eyebrow">COLEÇÃO DE FALAS</p><h2 id="quotes-title">Frases que ficam<span>.</span></h2></div>
+                <p class="quote-total"><strong id="visible-count">10</strong> momentos inesquecíveis</p>
+            </div>
+
+            <div class="filters" aria-label="Filtros de frases">
+                <label class="search-box"><span class="search-icon" aria-hidden="true">⌕</span><input id="search-input" type="search" placeholder="Busque uma frase ou filme" aria-label="Busque uma frase ou filme"><kbd>/</kbd></label>
+                <label class="select-wrap"><span class="sr-only">Filtrar por década</span><select id="decade-filter"><option value="all">Todas as décadas</option><option value="1970">Anos 70</option><option value="1980">Anos 80</option><option value="1990">Anos 90</option><option value="2000">Anos 2000</option></select></label>
+                <button class="filter-button" id="favorites-filter" type="button" aria-pressed="false"><span aria-hidden="true">♡</span> Só favoritas</button>
+            </div>
+
+            <div class="quote-grid" id="quote-grid" aria-live="polite"></div>
+            <p class="empty-state" id="empty-state" hidden>Nenhuma frase encontrada. Tente outra busca ou limpe os filtros.</p>
+        </section>
+
+        <section class="box-office" id="bilheteria" aria-labelledby="box-office-title">
+            <div class="box-office-title"><p class="eyebrow">DO PRIMEIRO LUGAR AO ÚLTIMO CRÉDITO</p><h2 id="box-office-title">Sucessos de<br><span>bilheteria.</span></h2><p>Uma seleção de filmes que conquistaram plateias pelo mundo.</p></div>
+            <ol class="movie-list">
+                <li><span>01</span> Avatar <small>2009</small></li>
+                <li><span>02</span> Vingadores: Ultimato <small>2019</small></li>
+                <li><span>03</span> Titanic <small>1997</small></li>
+                <li><span>04</span> Star Wars: O Despertar da Força <small>2015</small></li>
+                <li><span>05</span> Vingadores: Guerra Infinita <small>2018</small></li>
+                <li><span>06</span> Jurassic World <small>2015</small></li>
+                <li><span>07</span> O Rei Leão <small>2019</small></li>
+                <li><span>08</span> Os Vingadores <small>2012</small></li>
+                <li><span>09</span> Vingadores: Era de Ultron <small>2015</small></li>
+                <li><span>10</span> Harry Potter e as Relíquias da Morte – Parte 2 <small>2011</small></li>
+            </ol>
+        </section>
+    </main>
+
+    <footer class="footer"><a class="brand" href="#inicio"><span class="brand-mark">FC</span><span>FALA, <b>CINEMA!</b></span></a><span>Feito para quem sempre fica até o fim.</span><a href="#inicio">VOLTAR AO TOPO ↑</a></footer>
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+    <script src="app.js" defer></script>
+</body>
+</html>
